@@ -4,6 +4,7 @@
   <h2>Amount</h2>
   <input type="text" name="amount" placeholder="Enter amount" ng-model="amount" required>
 </form>
+<p> {{amount}} </p>
 <br/>
-<button id="send" class="send" ng-morph-modal="send">Send</button>
+<button id="send" class="send" ng-click="sendRayment()" ng-morph-modal="send">Send</button>
 

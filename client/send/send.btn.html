@@ -1,3 +1,5 @@
-<h2>Are you sure?</h2>
-<button class="send-yes btn btn-default" ng-click="sendPayment()">Yes</button>
-<button class="send-no btn btn-default">No</button>
+<div ng-controller="sendController">
+
+<button class="send-yes btn btn-default" ng-click="sendPayment(amount)"> Confirm {{amount}}</button>
+<button class="send-no btn btn-default">Cancel</button>
+</div>

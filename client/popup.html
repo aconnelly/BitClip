@@ -5,15 +5,15 @@
     <title>BitClip</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
     <link rel="stylesheet" href="styles.css">
   </head>
   <body ng-app="bitclip" ng-csp>
     <div class="container">
-      <div class="row">
-        <h4><span class="label label-primary">Your balance: 0 BTC</span></h4>
+      <div class="row banner">
+        <h4 class="btcBalance"><span class="label label-primary">Your balance: 0 BTC</span></h4>
       </div>
-      <div class="row">
+      <div class="row headerTabs">
         <ul class="nav nav-tabs" role="tablist">
           <li class="active"><a ui-sref="send">Send</a></li>
           <li><a ui-sref="receive">Receive</a></li>
@@ -26,7 +26,7 @@
       <!-- bower:js -->
     </div>
     <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script> -->
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="lib/angular-morph/dist/angular-morph.min.js"></script>

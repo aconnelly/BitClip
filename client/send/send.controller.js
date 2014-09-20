@@ -13,8 +13,8 @@ angular.module('bitclip.send', [
     modal: {
       templateUrl: 'send/send.btn.html',
       position: {
-        top: '85%',
-        left: '0%'
+        top: '85.5%',
+        left: '.5%'
       },
       fade: false
     }
@@ -32,7 +32,7 @@ angular.module('bitclip.send', [
   
   //TODO: sendPayment Functionality
   $scope.sendPayment = function(){
-
+    console.log('lol');
     chrome.storage.local.get('currentPrivateKey', function(key){
       console.log('kkeeey', key)
       sendTransactionBuilder.sendTransaction(key.currentPrivateKey, $scope.transactionDetails, false)

@@ -56,6 +56,9 @@ h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+button{
+  cursor:pointer;
+}
 
 
 /* ----------------------------------------- */
@@ -379,16 +382,45 @@ input.hasTimedError{
   bottom: 0.5%;
   height: 14%;
   padding: 0;
-
   border: 2px solid transparent;
-  /*border-color: #35A533;*/
   outline: 0;
-
   font-weight: 400;
-  
   color: white;
 }
+.sendButton:before{
+  content: "\e00d"
+  left: auto;
+  right: 10px;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  line-height: 3;
+  font-size: 140%;
+  width: 60px;
+}
 
+.sendButton:after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 200%;
+  background: rgba(255,255,255,0.1);
+  z-index: 1;
+  right: 0;
+  bottom: -100%;
+  margin: -5px 0 0 -5px;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(-12deg);
+  -moz-transform-origin: 0 0;
+  -moz-transform: rotate(-12deg);
+  -ms-transform-origin: 0 0;
+  -ms-transform: rotate(-12deg);
+  transform-origin: 0 0;
+  transform: rotate(-12deg);
+  transition: all 0.3s;
+}
 .sendButton {
   width: 99%;
   left: 0.5%;
@@ -396,7 +428,12 @@ input.hasTimedError{
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
 }
-
+.sendButton:hover{
+  /*background-color:#30942E;*/
+}
+.sendButton:hover:after {
+  width: 40%;
+}
 .sendButton:active {
   width:97%;
   left:1.5%;
@@ -407,27 +444,61 @@ input.hasTimedError{
   font-size: 1.2rem;
   width: 49.25%;
   background-color: transparent;
-  
   font-weight: 700;
-  /*font-size: 0.9em;*/
   bottom: 0.5%;
-  z-index: 21000;
+  /*z-index: 21000;*/
 }
-
 .send-confirm {
   background-color: #35A533;
   border-color: #35A533;
   left: 0.5%;
 }
-.send-confirm:active{
-  width:47.25%;
-  left:1.5%;
-}
-
 .send-cancel {
   background-color: #F15633;
   border-color: #F15633;
   right: 0.5%;
+}
+
+
+.morphButton:before{
+  position: absolute;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #fff;
+  z-index: -1;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  transition: all .1s;
+}
+
+.send-confirm:active{
+  width:47.25%;
+  left:1.5%;
+}
+.send-confirm:before{
+  content: "\2713";
+  left: 130%;
+  top: 30%;
+  
+}
+.send-confirm:hover{
+  background-color:#30942E;
+}
+.send-confirm:hover:before {
+ left: 80%;
+}
+
+
+.send-cancel:before{
+  content: "\2715";
+  left: 130%;
+  top: 30%;
+}
+.send-cancel:hover{
+  background-color:#D94D2E;
+}
+.send-cancel:hover:before {
+ left: 80%;
 }
 .send-cancel:active{
   width:47.25%;
